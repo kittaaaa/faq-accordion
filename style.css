@@ -1,0 +1,84 @@
+:root {
+    --bg: hsl(275, 100%, 97%);
+    --faq-bg: hsl(0, 0%, 100%);
+    --title: hsl(292, 42%, 14%);
+    --text: hsl(292, 16%, 49%);
+}
+
+
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    min-width: 100%;
+    min-height: 100vh;
+}
+.wraper {
+    width: 100%;
+    min-height: inherit;
+    background-color: var(--bg);
+    background-image: url('/assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    cursor: pointer;
+}
+.btn {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--faq-bg);
+    border-radius: 0.5rem;
+}
+main header {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+.faq-wraper {
+    padding: 1rem;
+}
+.faq-wraper span {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+}
+.faq .faq-wraper .ans {
+    color: var(--text);
+    padding: 1.2rem 0 1.2rem 0;
+    line-height: 1.5;
+}
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 1440px){
+    .wraper {
+        background-image: url('/assets/images/background-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    main {
+        max-width: 625px;
+    }
+}
